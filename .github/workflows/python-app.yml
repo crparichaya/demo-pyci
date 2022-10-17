@@ -43,5 +43,4 @@ jobs:
         coverage run -m unittest test_statistics.py
 
     - name : upload report
-      run: |
-        $ProgressPreference = 'SilentlyContinue' Invoke-WebRequest -Uri https://uploader.codecov.io/latest/windows/codecov.exe -Outfile codecov.exe .\codecov.exe
+      uses: codecov/codecov-action@v3
